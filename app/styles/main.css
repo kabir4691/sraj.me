@@ -26,6 +26,10 @@ main {
   min-height: 100%;
 }
 
+.banner {
+	text-align: center;
+}
+
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
   main {
