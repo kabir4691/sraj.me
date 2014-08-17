@@ -5,3 +5,19 @@ body {
   margin: 0;
   padding: 0;
 }
+
+body {
+  position: relative;
+  font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+main {
+  margin: 0 auto;
+  /* Height of the header */
+  padding: 60px 16px 16px 16px;
+  min-height: 100%;
+}
