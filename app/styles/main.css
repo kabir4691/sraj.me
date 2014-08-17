@@ -45,7 +45,7 @@ core-toolbar {
 
 .banner {
 	width: 80%;
-	margin: 72px auto;
+	margin: 36px auto;
 	text-align: center;
 	color: white;
 }
@@ -60,5 +60,9 @@ core-toolbar {
 
   body {
     overflow-y: scroll;
+  }
+
+  .banner {
+    margin: 72px auto;
   }
 }
