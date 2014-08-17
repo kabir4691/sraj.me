@@ -18,6 +18,11 @@ body.open {
   overflow: hidden;
 }
 
+a, a:hover {
+	color: white;
+	text-decoration: none;
+}
+
 main {
   margin: 0 auto;
   /* Height of the header */
@@ -25,13 +30,14 @@ main {
   min-height: 100%;
 }
 
-core-header-panel{
+core-header-panel {
 	height: 100%;
     overflow: auto;
     -webkit-overflow-scolling: touch;
     background-color: #ec407a;
 }
-core-toolbar{
+
+core-toolbar {
 	font-weight: 400;
 	background-color: #c2185b;
 	color: white;
