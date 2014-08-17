@@ -8,6 +8,8 @@
 
 	<title>Astha Sharma</title>
 
+	<script src="lib/platform/platform.js"></script>
+
 	<!-- build:css styles/components/main.min.css -->
     <link rel="stylesheet" href="styles/h5bp.css">
     <link rel="stylesheet" href="styles/components/components.css">
@@ -15,16 +17,29 @@
     <!-- endbuild -->
 
     <link rel="import" href="lib/font-roboto/roboto.html">
+    <link rel="import" href="lib/core-elements/core-elements.html">
+    <link rel="import" href="lib/paper-elements/paper-elements.html">
 
 	<script src="scripts/main.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
-<body>
-	<main>
-	  <div class="banner">
-	  	<p class="huge">Astha Sharma</p>
-      	<p class="large">Quick learner, faster breaker, all in all a robust maker.</p>
-      	<p class="large">Even my code rhymes...</p>
-	  </div>
-    </main>
+<body fullbleed unresolved touch-action="auto">
+    
+    <core-header-panel>
+    
+        <core-toolbar>
+			<paper-icon-button icon="favorite"></paper-icon-button>
+            <span flex>Astha.me</span>
+			<paper-icon-button icon="apps"></paper-icon-button>
+        </core-toolbar>
+    
+        <main>
+		  <div class="banner">
+		  	<p class="huge">Astha Sharma</p>
+	      	<p class="large">Quick learner, faster breaker, all in all a robust maker.</p>
+	      	<p class="large">Even my code rhymes...</p>
+		  </div>
+	    </main>
+        
+    </core-header-panel>
 </body>
 </html>
