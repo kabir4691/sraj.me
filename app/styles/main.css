@@ -29,10 +29,11 @@ core-header-panel{
 	height: 100%;
     overflow: auto;
     -webkit-overflow-scolling: touch;
-    background-color: #e51c23;
+    background-color: #ec407a;
 }
 core-toolbar{
-	background-color: #b0120a;
+	font-weight: 400;
+	background-color: #c2185b;
 	color: white;
 }
 
