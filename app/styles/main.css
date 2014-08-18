@@ -51,7 +51,7 @@ core-toolbar {
 }
 
 .banner-fab {
-  margin: 48px auto;
+  margin: 24px auto;
   background: #f57f17;
 }
 
@@ -69,5 +69,9 @@ core-toolbar {
 
   .banner {
     margin: 72px auto;
+  }
+
+  .banner-fab {
+    margin: 48px auto;
   }
 }
