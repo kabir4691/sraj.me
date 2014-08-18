@@ -50,6 +50,11 @@ core-toolbar {
 	color: #e5e5e5;
 }
 
+.banner-fab {
+  margin: 48px auto;
+  background: #f57f17;
+}
+
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
   main {
