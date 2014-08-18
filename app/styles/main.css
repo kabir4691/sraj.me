@@ -55,6 +55,10 @@ core-toolbar {
   background: #f57f17;
 }
 
+.banner-fab::shadow #ripple {
+    color: #fbc02d;
+}
+
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
   main {
