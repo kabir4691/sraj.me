@@ -34,12 +34,12 @@ core-header-panel {
 	height: 100%;
     overflow: auto;
     -webkit-overflow-scolling: touch;
-    background-color: #673ab7;
+    background-color: #fee8d6;
 }
 
 core-toolbar {
 	font-weight: 400;
-	background-color: #fbc02d;
+	background-color: #bb2a3c;
 	color: white;
 }
 
@@ -47,16 +47,19 @@ core-toolbar {
 	width: 80%;
 	margin: 24px auto;
 	text-align: center;
-	color: #e5e5e5;
+	color: #be2625;
 }
 
 .banner-fab {
   margin: 24px auto;
-  background: #f57f17;
+  color: #e5e5e5;
+  background: #bb2a3c;
+  -webkit-animation-iteration-count: 3;
+  animation-iteration-count: 3;
 }
 
 .banner-fab::shadow #ripple {
-    color: #fbc02d;
+    color: #e5e5e5;
 }
 
 /** Larger Screens - desktops and tablets **/
