@@ -26,7 +26,7 @@ a, a:hover {
 main {
   margin: 0 auto;
   /* Height of the header */
-  padding: 60px 16px 16px 16px;
+  padding: 24px 16px 16px 16px;
   min-height: 100%;
 }
 
