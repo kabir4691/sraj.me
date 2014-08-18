@@ -62,13 +62,9 @@ core-toolbar {
 .banner-fab::shadow #ripple {
     color: #e5e5e5;
 }
-.huge{
- font-family: 'Pacifico', cursive; 
-}
-.large{
-font-family: 'Pacifico', cursive;
-font-family: 'Dancing Script', cursive;
 
+.title {
+ font-family: 'Pacifico', cursive; 
 }
 
 /** Larger Screens - desktops and tablets **/
