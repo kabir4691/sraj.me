@@ -32,14 +32,14 @@ main {
 
 core-header-panel {
 	height: 100%;
-    overflow: auto;
-    -webkit-overflow-scolling: touch;
-    background-color: #fee8d6;
+  overflow: auto;
+  -webkit-overflow-scolling: touch;
+  background-color: #f38630;
 }
 
 core-toolbar {
 	font-weight: 400;
-	background-color: #bb2a3c;
+	background-color: #69d2e7;
 	color: white;
 }
 
@@ -47,14 +47,13 @@ core-toolbar {
 	width: 80%;
 	margin: 24px auto;
 	text-align: center;
-	color: #be2625;
-  
+	color: #e0e4cc;
 }
 
 .banner-fab {
   margin: 24px auto;
   color: #e5e5e5;
-  background: #bb2a3c;
+  background: #69d2e7;
   -webkit-animation-iteration-count: 3;
   animation-iteration-count: 3;
 }
