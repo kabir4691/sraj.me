@@ -34,12 +34,12 @@ core-header-panel {
 	height: 100%;
   overflow: auto;
   -webkit-overflow-scolling: touch;
-  background-color: #f38630;
+  background-color: #e0e4cc;
 }
 
 core-toolbar {
 	font-weight: 400;
-	background-color: #69d2e7;
+	background-color: #372312;
 	color: white;
 }
 
@@ -47,19 +47,19 @@ core-toolbar {
 	width: 80%;
 	margin: 24px auto;
 	text-align: center;
-	color: #e0e4cc;
+	color: #372312;
 }
 
 .banner-fab {
   margin: 24px auto;
   color: #e5e5e5;
-  background: #69d2e7;
+  background: #372312;
   -webkit-animation-iteration-count: 3;
   animation-iteration-count: 3;
 }
 
 .banner-fab::shadow #ripple {
-    color: #e5e5e5;
+    color: #372312;
 }
 
 .title {
