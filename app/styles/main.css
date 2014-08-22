@@ -43,6 +43,10 @@ core-toolbar {
 	color: white;
 }
 
+core-toolbar paper-icon-button {
+  color: #e0e4cc;
+}
+
 .banner {
 	width: 80%;
 	margin: 24px auto;
@@ -53,7 +57,7 @@ core-toolbar {
 .banner-fab {
   margin: 24px auto;
   color: #e5e5e5;
-  background: #69d2e7;
+  background: #69d2e7 ;
   -webkit-animation-iteration-count: 3;
   animation-iteration-count: 3;
 }
