@@ -38,7 +38,7 @@ core-header-panel {
 }
 
 core-toolbar {
-	font-weight: 400;
+	font-weight: 600;
 	background-color: #69d2e7;
 	color: white;
 }
@@ -75,6 +75,8 @@ core-toolbar paper-icon-button {
 }
 #apps core-toolbar{
   background: #eeff41;
+  color: #00e5ff;
+
 }
 
 /** Larger Screens - desktops and tablets **/
