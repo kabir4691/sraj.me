@@ -70,6 +70,10 @@ core-toolbar paper-icon-button {
  font-family: 'Pacifico', cursive; 
 }
 
+#apps {
+  background: #e0e4cc;
+}
+
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
   main {
