@@ -71,7 +71,10 @@ core-toolbar paper-icon-button {
 }
 
 #apps {
-  background: #e0e4cc;
+  background: #1FDA9A;
+}
+#apps core-toolbar{
+  background: #eeff41;
 }
 
 /** Larger Screens - desktops and tablets **/
