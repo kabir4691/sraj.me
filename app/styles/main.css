@@ -19,8 +19,8 @@ body.open {
 }
 
 a, a:hover {
-	color: white;
-	text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 main {
@@ -31,16 +31,16 @@ main {
 }
 
 core-header-panel {
-	height: 100%;
+  height: 100%;
   overflow: auto;
   -webkit-overflow-scolling: touch;
   background-color: #ffa000;
 }
 
 core-toolbar {
-	font-weight: 600;
-	background-color: #69d2e7;
-	color: white;
+  font-weight: 600;
+  background-color: #69d2e7;
+  color: white;
 }
 
 core-toolbar paper-icon-button {
@@ -48,10 +48,10 @@ core-toolbar paper-icon-button {
 }
 
 .banner {
-	width: 80%;
-	margin: 24px auto;
-	text-align: center;
-	color: #ffffff;
+  width: 80%;
+  margin: 24px auto;
+  text-align: center;
+  color: #ffffff;
 }
 
 .banner-fab {
@@ -80,7 +80,7 @@ core-toolbar paper-icon-button {
 
 }
 
-.guides-section {
+.guides-section{
   background: #1FDA9A;
 }
 
@@ -94,12 +94,8 @@ core-toolbar paper-icon-button {
 
 .guides-list__item {
   background: #f4ff81;
-  margin-bottom: 36px;
 }
 
-.primary-content {
-  padding-bottom: 20px;
-}
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
   main {
