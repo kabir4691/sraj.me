@@ -2084,7 +2084,7 @@ small {
 p,
 ul,
 ol {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.6250em;
   /* 26px */
   padding-top: 1.6250em;
@@ -2945,7 +2945,7 @@ object {
 
 .guides-list__item {
   padding: 0;
-  background: #ffffff;
+  background: #f4ff81;
   margin-top: 26px;
   margin-bottom: 0;
 }

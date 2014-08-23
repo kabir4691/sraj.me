@@ -84,6 +84,9 @@ core-toolbar paper-icon-button {
 .xxlarge{
   color: #1a237e;
 }
+.guides-list_item p{
+  background: #f4ff81;
+}
 
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
