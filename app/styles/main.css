@@ -94,6 +94,7 @@ core-toolbar paper-icon-button {
 
 .guides-list__item {
   background: #f4ff81;
+  border-radius: 10px;
 }
 
 /** Larger Screens - desktops and tablets **/
