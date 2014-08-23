@@ -84,10 +84,15 @@ core-toolbar paper-icon-button {
   background: #1FDA9A;
 }
 
-.xxlarge{
+.xxlarge {
   color: #1a237e;
 }
-.guides-list_item p{
+
+.guides-list {
+  padding-bottom: 30px;
+}
+
+.guides-list__item {
   background: #f4ff81;
 }
 
