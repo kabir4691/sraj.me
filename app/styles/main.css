@@ -80,17 +80,21 @@ core-toolbar paper-icon-button {
 
 }
 
-.xxlarge{
-  color: #1a237e;
-}
-
 .guides-section {
   background: #1FDA9A;
 }
 
+.xxlarge {
+  color: #1a237e;
+}
+
+.guides-list {
+  padding-bottom: 30px;
+}
+
 .guides-list__item {
   background: #f4ff81;
-  border-radius: 6px;
+  margin-bottom: 36px;
 }
 
 .primary-content {
