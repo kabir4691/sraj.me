@@ -73,14 +73,17 @@ core-toolbar paper-icon-button {
 #apps {
   background: #1FDA9A;
 }
+
 #apps core-toolbar{
   background: #eeff41;
   color: #00e5ff;
 
 }
+
 .guides-section{
   background: #1FDA9A;
 }
+
 .xxlarge{
   color: #1a237e;
 }
