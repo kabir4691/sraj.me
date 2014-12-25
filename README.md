@@ -2,10 +2,9 @@ astha.me
 ========
 
 This project serves as the landing page for [astha.me](http://astha.me)
-It showcases all of my projects.
+It showcases all of my projects, in a nice little responsive portfoilo.
 
-This project uses the [Google Web Starter Kit](https://developers.google.com/web/starter-kit/) components to facilitate responsive behaviour on mobile platforms.
-Material design inspired UI built using the [Polymer project.](http://http://www.polymer-project.org/)
+Credit to [Web Starter Kit](https://developers.google.com/web/starter-kit/) by Google for the boilerplate and responsive styles.
 
 Authors
 - Astha Sharma
