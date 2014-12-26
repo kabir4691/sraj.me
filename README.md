@@ -1,11 +1,12 @@
-astha.me
+sraj.me
 ========
 
-This project serves as the landing page for [astha.me](http://astha.me)
+Forked from [astha.me](https://github.com/asthas/astha.me), inspired by [http://roman.nurik.net](Roman Nurik's homepage)
+
+Source code for [sraj.me](http://sraj.me)
 It showcases all of my projects, in a nice little responsive portfoilo.
 
-Credit to [Web Starter Kit](https://developers.google.com/web/starter-kit/) by Google for the boilerplate and responsive styles.
+Credits to [Web Starter Kit](https://developers.google.com/web/starter-kit/) by Google for the boilerplate and responsive styles, Roman Nurik
 
-Authors
-- Astha Sharma
+Author
 - Shantanu Raj

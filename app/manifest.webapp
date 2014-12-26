@@ -1,14 +1,14 @@
 {
   "version": "1.0.0",
-  "name": "Astha Sharma",
+  "name": "Shantanu Raj",
   "launch_path": "/index.html",
   "description": "My portfolio.",
   "icons": {
     "128": "/images/touch/icon-128x128.png"
   },
   "developer": {
-    "name": "Astha Sharma",
-    "url": "http://astha.me"
+    "name": "Shantanu Raj",
+    "url": "http://sraj.me"
   },
   "installs_allowed_from": [
     "*"
@@ -18,7 +18,7 @@
   },
   "locales": {
     "en": {
-      "name": "Astha Sharma",
+      "name": "Shantanu Raj",
       "description": "My portfolio."
     }
   }
