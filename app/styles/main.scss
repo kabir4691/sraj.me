@@ -1,4 +1,4 @@
-$colorPrimary: #FFA000;
+$colorPrimary: #009688;
 
 $avatarSize: 128px;
 $avatarSizeSmall: 96px;
@@ -179,7 +179,7 @@ body {
       }
     }
 
-    $links: googleplus github email;
+    $links: twitter github googleplus email;
     @each $link in $links {
       .#{$link} { background-image: url(../images/icon_#{$link}.svg); }
     }
