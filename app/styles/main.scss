@@ -38,7 +38,7 @@ body {
 
 .banner {
   width:100%;
-  height:337px;
+  height:540px;
   display:block;
   opacity:1;
   position:relative;
@@ -67,7 +67,7 @@ p {
 }
 
 .banner-title {
-  padding-top: 168px;
+  padding-top: 380px;
   position: absolute;
   width: 100%;
   text-align: center;
@@ -76,5 +76,6 @@ p {
 }
 
 .tab-icon {
-  border-image: url(http://localhost:3000/images/apps.svg);
+  background-image: url(http://localhost:3000/images/apps.svg);
+  z-index: -1
 }
