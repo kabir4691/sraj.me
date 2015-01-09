@@ -75,7 +75,11 @@ p {
   z-index: 1;
 }
 
-.tab-icon {
+.app-icon {
   background-image: url(http://localhost:3000/images/apps.svg);
-  z-index: -1
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background-size: 48px 48px;
+  background-repeat: no-repeat;
 }
