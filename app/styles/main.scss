@@ -46,6 +46,7 @@ body {
   background-position:center;
   background-size:cover,0,0,0;
   background-image: url(http://localhost:3000/images/banner.png);
+  z-index: 0;
 }
 
 .overlay {
@@ -77,9 +78,12 @@ p {
 
 .app-icon {
   background-image: url(http://localhost:3000/images/apps.svg);
-  position: relative;
+  position: absolute;
+  margin-top: 16px;
+  margin-left: 16px;
   width: 48px;
   height: 48px;
   background-size: 48px 48px;
   background-repeat: no-repeat;
+  z-index: 1;
 }
