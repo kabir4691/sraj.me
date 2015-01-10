@@ -63,14 +63,10 @@ body {
   background-color: #444;
 }
 
-p {
+.banner-title {
   color: #eee;
-  font-family: 'Alegreya';
   font-size: 92px;
   text-shadow: 0 4px 0 rgba(#000, 0.1);
-}
-
-.banner-title {
   padding-top: 380px;
   position: absolute;
   width: 100%;
@@ -87,10 +83,10 @@ p {
   height: 32px;
   background-size: 32px 32px;
   background-repeat: no-repeat;
-  z-index: 1;
+  z-index: 5;
 }
 
-.card-container {
+#card-container {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -106,7 +102,13 @@ p {
 
 }
 
-.screenshot {
+.description {
+  position: relative;
   margin-left: 16px;
   margin-top: 16px;
+  color: #111;
+  font-size: 28px;
+  font-family: 'Alegreya';
+  float: right;
 }
+
