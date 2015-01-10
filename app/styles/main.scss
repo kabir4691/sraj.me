@@ -25,11 +25,13 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   background-color: #333;
 }
 
 body {
+  height: 100%;
   position: relative;
   font-family: alegreya, serif;
   font-weight: 400;
@@ -56,6 +58,7 @@ body {
 }
 
 .content {
+  position: relative;
   height: 100%;
   background-color: #444;
 }
@@ -85,4 +88,12 @@ p {
   background-size: 32px 32px;
   background-repeat: no-repeat;
   z-index: 1;
+}
+
+.card-container {
+  position: absolute;
+  
+  height: 50%;
+  width: 100%;
+  background-color: #ff0000;
 }
