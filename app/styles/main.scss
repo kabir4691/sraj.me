@@ -98,8 +98,23 @@ p {
 }
 
 .card {
-  position: absolute;
+  position: relative;
   height: 50%;
   width: 50%;
-  background-color: #000;
+}
+
+.red {
+  background-color: #ff0000;
+}
+
+.green {
+  background-color: #00ff00;
+}
+
+.blue {
+  background-color: #0000ff;
+}
+
+.black {
+  background-color: #000000;
 }
