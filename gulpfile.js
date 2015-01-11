@@ -65,6 +65,7 @@ gulp.task('copy', function () {
   return gulp.src([
     'app/*',
     '!app/*.html',
+    'app/assets/resume.pdf',
     'node_modules/apache-server-configs/dist/.htaccess'
   ], {
     dot: true

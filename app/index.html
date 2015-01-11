@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name=theme-color content="#009688">
+    <meta name="theme-color" content="#009688">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Hi, I'm Shantanu, I make beautiful web and mobile apps.">
     <title>Shantanu Raj</title>
@@ -26,58 +26,60 @@
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#009688">
 
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alegreya:400,700">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    <div class="app-icon">
-      <a href="#card-container">
-        <img src="images/apps.svg" width="32px" height="32px">    
-      </a>
-    </div>
-    
-    <div class="content">
-        <div class="banner">
-          <div class="overlay">
-          </div>
+    <header class="app-bar">
+      <div class="overlay"></div>
+      <div class="app-bar-container">
+        <h1 class="logo">
+          Shantanu Raj
+        </h1>
+        <section class="app-bar-actions">
+          <button class="apps"><img src="images/apps.svg" width="48px" height="48px"></button>
+        </section>
+      </div>
+    </header>
+
+    <main>
+      <p class="large">I'm a <a href="http://github.com/shantanuraj">web</a> &amp <a href="http://goo.gl/8Q7ubT">android</a> app developer. I work on backends and logic. I am a nerd for clean visual design.<br><br>I love to code in Go.I write a lot of Python and JavaScript too.
+      <br><br>My <a href="assets/resume.pdf">résumé.</a></p>
+
+      <p class="xlarge" id="apps">Apps</p>
+      
+      <div class="apps-info">
+        <div class="app-info g-medium--full g-wide--2">
+          <p>
+            <img src="images/atten.png" class="screenshot" height="400px" width="240px" align="left">
+            <a href="http://goo.gl/8Q7ubT"><p class="large">Atten</p></a>
+            Available on the Google Play Store.<br>An elegantly designed app to track your attendance,
+            follows Google’s Material Design guidelines.<br>Learned to design logic model, to abstract
+            the view and controller using a MVC inspired coding approach
+          </p>
         </div>
-        <div class="banner-title">
-          <p>Shantanu Raj</p>
+        <div class="app-info g-medium--full g-wide--2 g-wide--last">
+          <p>
+            <img src="images/emgur.png" class="screenshot" height="400px" width="240px" align="left">
+            <p class="large">Emgur</p>
+            Current project, hope to release on the Play Store soon. Emgur is an app to browse Imgur
+            in style. Using the Imgur API.<br>Gained a lot of insight, optimising both the UX and network resources.
+          </p>
         </div>
-    </div>
-
-    <div id="card-container">
-          <div class="card">
-          <p class="description">
-          <img src="images/emgur.png" class="screenshot" height="400px" width="240px" align="left">Available on the Google Play Store.<br>An elegantly designed app to track your attendance,
-          follows Google’s Material Design guidelines.<br>Learned to design logic model, to abstract
-          the view and controller using a MVC inspired coding approach</p>        
+        <div class="app-info g-medium--full g-wide--2 g-wide--push-1">
+          <p>
+            <img src="images/bluebox.png" class="screenshot" height="400" width="225px" align="left">
+            <p class="large">Bluebox</p>
+            A sideproject iOS app built in Swift, made for a friend.<br>Learned about the iOS platform &amp the Swift language.<br>Built data models abstracted from the view handler logic.
+          </p>
+        </div>
       </div>
 
-      <div class="card">
-          <p class="description">
-          <img src="images/emgur.png" class="screenshot" height="400px" width="240px" align="left">Available on the Google Play Store.<br>An elegantly designed app to track your attendance,
-          follows Google’s Material Design guidelines.<br>Learned to design logic model, to abstract
-          the view and controller using a MVC inspired coding approach</p>        
-      </div>
-
-      <div class="card">
-          <p class="description">
-          <img src="images/emgur.png" class="screenshot" height="400px" width="240px" align="left">Available on the Google Play Store.<br>An elegantly designed app to track your attendance,
-          follows Google’s Material Design guidelines.<br>Learned to design logic model, to abstract
-          the view and controller using a MVC inspired coding approach</p>        
-      </div>
-
-      <div class="card">
-          <p class="description">
-          <img src="images/emgur.png" class="screenshot" height="400px" width="240px" align="left">Available on the Google Play Store.<br>An elegantly designed app to track your attendance,
-          follows Google’s Material Design guidelines.<br>Learned to design logic model, to abstract
-          the view and controller using a MVC inspired coding approach</p>        
-      </div>
-    </div>    
+    </main>
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -86,5 +88,6 @@
       ga('create', 'UA-43262567-3', 'auto');
       ga('send', 'pageview');
     </script>
+    <!-- Built with love using Web Starter Kit -->
   </body>
 </html>

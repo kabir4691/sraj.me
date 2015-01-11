@@ -20,7 +20,9 @@
   'use strict';
   // Show my email address
   (function() {
-    var emailNode = document.querySelector('.email.obfuscated');
+    var querySelector = document.querySelector.bind(document);
+    var emailNode = querySelector('.email.obfuscated');
+    
     if (emailNode.dataset) {
       var obfuscated = emailNode.dataset.email;
       emailNode.setAttribute('href', 'mailto:' + obfuscated
@@ -28,5 +30,12 @@
             .replace(/ /, '.'));
       console.log(obfuscated);
     }
+
+    var apps = querySelector('.apps');
+    function openApps() {
+      location.href = '#apps';
+    }
+    apps.addEventListener('click', openApps);
+
   })();  
 })();

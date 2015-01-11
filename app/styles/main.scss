@@ -1,114 +1,245 @@
-$colorPrimary: #009688;
+/*
+ * Web Starter Kit
+ *
+ * Multi-screen layout styles for your page. Brought to you by the
+ * Web Starter Kit team.
+ *
+ */
+@import '_h5bp';
 
-$avatarSize: 128px;
-$avatarSizeSmall: 96px;
-
-$avatarBorder: 4px;
-$avatarBorderSmall: $avatarBorder;
-
-$mainPadding: 24px;
-
-$break-small: 360px;
-@mixin respond-to($media) {
-  @if $media == handhelds {
-    @media only screen and (max-width: $break-small) { @content; }
-  }
-  // @else if $media == medium-screens {
-  //   @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
-  // }
-  // @else if $media == wide-screens {
-  //   @media only screen and (min-width: $break-large) { @content; }
-  // }
-}
+/*
+ * Visual Style Guide styles
+ * Remove if you prefer to use a CSS library, like Bootstrap
+ */
+@import 'components/components';
 
 html,
 body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
-  -webkit-font-smoothing: antialiased;
-  background-color: #333;
 }
 
 body {
-  height: 100%;
   position: relative;
-  font-family: alegreya, serif;
-  font-weight: 400;
-  align-items: center;
+  font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  background-color: #fff;
+  box-sizing: border-box;
+  min-height: 100%;
 }
 
-.banner {
-  width:100%;
-  height:540px;
-  display:block;
-  opacity:1;
-  position:relative;
+body.open {
+  overflow: hidden;
+}
+
+#apps {
+  text-align: center;
+}
+
+.app-bar {
+  display: block;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(http://localhost:3001/images/banner.png);
   background-repeat:no-repeat;
   background-position:center;
   background-size:cover,0,0,0;
-  background-image: url(http://localhost:3000/images/banner.png);
-  z-index: 0;
-}
-
-.overlay {
-    background:rgba(0,0,0,.4);
-    width:100%;
-    height:100%
-}
-
-.content {
-  position: relative;
-  height: 100%;
-  background-color: #444;
-}
-
-.banner-title {
-  color: #eee;
-  font-size: 92px;
-  text-shadow: 0 4px 0 rgba(#000, 0.1);
-  padding-top: 380px;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  top: 0;
+  overflow: hidden;
   z-index: 1;
 }
 
-.app-icon {
-  position: absolute;
-  margin-top: 16px;
-  margin-left: 16px;
-  width: 32px;
-  height: 32px;
-  background-size: 32px 32px;
-  background-repeat: no-repeat;
-  z-index: 5;
-}
-
-#card-container {
-  position: absolute;
-  height: 100%;
+.app-bar-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  background-color: #eee;
-}
-
-.card {
+  height: 60px;
   position: relative;
-  float: left;
-  height: 50%;
-  width: 50%;
-  color: #ccc;
-
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
 }
 
-.description {
-  position: relative;
-  margin-left: 16px;
-  margin-top: 16px;
-  color: #111;
-  font-size: 28px;
-  font-family: 'Alegreya';
-  float: right;
+.app-bar .logo {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 2em;
+  line-height: 60px;
+  margin: 0 16px;
+  padding: 0;
+  color: #fefefe;
+  float: none;
+  max-width: none;
+  font-weight: 300;
+  display: initial;
 }
 
+.app-bar .logo a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: normal;
+}
+
+.app-bar-actions {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  z-index: 2;
+}
+
+.app-bar button {
+  width: 60px;
+  height: 60px;
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: inline-block;
+  -webkit-transition: background-color 0.2s ease-out;
+          transition: background-color 0.2s ease-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-bar button img {
+  height: 24px;
+  width: 24px;
+}
+
+.app-bar button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.app-bar button:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: 0;
+}
+
+.app-bar button:active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.base,
+p,
+ul,
+ol {
+  font-size: 19px;
+}
+
+main {
+  margin: 0 auto;
+  /* Height of the header */
+  padding: 60px 16px 16px 16px;
+  min-height: 100%;
+}
+
+/** Larger Screens - desktops and tablets **/
+@media all and (min-width: 990px) {
+  .app-bar {
+    position: relative;
+  }
+
+  .app-bar.open,
+  .app-bar.open ~ main {
+    -webkit-transform: translate(0px, 0);
+            transform: translate(0px, 0);
+  }
+
+  .app-bar-container {
+    display: block;
+    height: 540px;
+    max-width: 864px;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .app-bar .logo {
+    float: left;
+    margin: 0;
+    padding: 0;
+    line-height: 540px;
+    font-size: 110px;
+  }
+
+  .app-bar-actions {
+    float: right;
+  }
+
+  .app-bar::after {
+    content: ' ';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+  }
+
+  button.menu {
+    display: none;
+  }
+
+  main {
+    max-width: 864px;
+    padding-top: 0;
+    min-height: initial;
+  }
+
+  body {
+    overflow-y: scroll;
+  }
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/RobotoCondensed-Light.eot);
+  src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url(/fonts/RobotoCondensed-Light.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Light.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/RobotoCondensed-Regular.eot);
+  src: local('Roboto Condensed Regular'), local('RobotoCondensed-Regular'), url(/fonts/RobotoCondensed-Regular.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/RobotoCondensed-Bold.eot);
+  src: local('Roboto Condensed Regular'), local('RobotoCondensed-Bold'), url(/fonts/RobotoCondensed-Bold.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 300;
+  src: url(/fonts/RobotoCondensed-LightItalic.eot);
+  src: local('Roboto Condensed Light Italic'), local('RobotoCondensed-LightItalic'), url(/fonts/RobotoCondensed-LightItalic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-LightItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 400;
+  src: url(/fonts/RobotoCondensed-Italic.eot);
+  src: local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'), url(/fonts/RobotoCondensed-Italic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Italic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 700;
+  src: url(/fonts/RobotoCondensed-BoldItalic.eot);
+  src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'), url(/fonts/RobotoCondensed-BoldItalic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-BoldItalic.woff) format('woff');
+}
