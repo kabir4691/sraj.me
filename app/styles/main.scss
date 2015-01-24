@@ -44,10 +44,7 @@ body.open {
   position: fixed;
   top: 0;
   left: 0;
-  background-image: url(../images/banner.png);
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:cover,0,0,0;
+  background-color: $colorPrimary;
   overflow: hidden;
   z-index: 1;
 }
