@@ -3,12 +3,8 @@
 
 # TEAM
 
-  <name> -- <role> -- <twitter>
-
-# THANKS
-
-  <name>
+  Shantanu -- Designer -- @shantanuraj
 
 # TECHNOLOGY COLOPHON
 
-  HTML5, CSS3
+  HTML5, SCSS, JS, GULP
