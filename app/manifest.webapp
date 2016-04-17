@@ -2,13 +2,13 @@
   "version": "1.0.0",
   "name": "Shantanu Raj",
   "launch_path": "/index.html",
-  "description": "My portfolio.",
+  "description": "Shantanu Raj Portfolio",
   "icons": {
     "128": "/images/touch/icon-128x128.png"
   },
   "developer": {
     "name": "Shantanu Raj",
-    "url": "http://sraj.me"
+    "url": "https://sraj.me"
   },
   "installs_allowed_from": [
     "*"
@@ -19,7 +19,7 @@
   "locales": {
     "en": {
       "name": "Shantanu Raj",
-      "description": "My portfolio."
+      "description": "Shantanu Raj Portfolio"
     }
   }
 }
