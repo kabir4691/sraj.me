@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "sraj.me",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Portfolio website/blog",
+  "version": "2.0.0",
+  "author": "Shantanu Raj <s@sraj.me>",
   "dependencies": {
     "gatsby": "^2.9.11",
     "gatsby-image": "^2.1.4",
