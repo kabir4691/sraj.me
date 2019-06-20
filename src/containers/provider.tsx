@@ -6,24 +6,28 @@ interface IProviderProps {
   children: React.ReactElement
 }
 
-interface IProvision {
+interface IProviderState {
   theme: ITheme
 }
 
 /**
  * Root Provider container
  */
-export default function Provider ({ children }: IProviderProps) {
-  const props = getProps();
-  return (
-    <ThemeContext.Provider value={props.theme} >
-      {children}
-    </ThemeContext.Provider>
-  )
+export default class Provider extends React.Component<IProviderProps, IProviderState> {
+  state = getProps();
+
+  render() {
+    const { theme } = this.state;
+    return (
+      <ThemeContext.Provider value={theme} >
+        {this.props.children}
+      </ThemeContext.Provider>
+    );
+  }
 }
 
-function getProps (): IProvision {
-  const theme = appTheme();
+function getProps (): IProviderState {
+  const theme = appTheme('light');
   return {
     theme,
   }

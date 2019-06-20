@@ -1,5 +1,6 @@
 import { darkTheme } from './dark-theme';
 import { lightTheme } from './light-theme';
+import { ITheme } from '../type';
 
 const themes = {
   'dark': darkTheme,
@@ -9,6 +10,6 @@ const themes = {
 /**
  * Theme provider
  */
-export const appTheme = (mode: keyof typeof themes = 'dark') => {
+export const appTheme = (mode: ITheme['theme'] = 'dark') => {
   return themes[mode];
 }
