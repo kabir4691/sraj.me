@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { isBrowser } from '../utils/is-browser';
 
 /**
  * Use keyPress hook
@@ -14,13 +15,12 @@ export function useKeyPress(targetKey: string, callback: () => void) {
 
   // Add event listeners
   useEffect(() => {
-    const isBrowser = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
-    if (!isBrowser) {
+    if (!isBrowser()) {
       return null;
     }
     window.addEventListener('keyup', upHandler);
     return () => {
       window.removeEventListener('keyup', upHandler);
     };
-  }, []);
+  });
 }

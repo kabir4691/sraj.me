@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { IAppState, StateContext } from '../state';
 import { appTheme } from '../theme';
+import { preferredTheme } from '../utils/theme-preference';
 
 interface IProviderProps {
   children: React.ReactElement;
@@ -20,6 +21,7 @@ export default function Provider({ children }: IProviderProps) {
 }
 
 function getTheme(): IAppState['theme'] {
-  const theme = appTheme('light');
+  const themeMode = preferredTheme();
+  const theme = appTheme(themeMode);
   return theme;
 }

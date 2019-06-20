@@ -6,6 +6,7 @@ import { StateContext } from '../state';
 import { ITheme } from '../type';
 import { appTheme } from '../theme';
 import { useKeyPress } from '../hooks/use-key-press';
+import { Storage } from '../utils/storage';
 
 const iconMap = {
   dark: 'night' as const,
@@ -14,7 +15,11 @@ const iconMap = {
 
 function ThemeIcon() {
   const { theme, changeTheme } = useContext(StateContext);
-  const cycleAppTheme = useCallback(() => changeTheme(cycleTheme), [theme.theme]);
+  const cycleAppTheme = useCallback(() => {
+    const nextTheme = cycleTheme(theme);
+    Storage.saveTheme(nextTheme.theme);
+    changeTheme(nextTheme);
+  }, [theme.theme]);
   useKeyPress('t', cycleAppTheme);
 
   return (
