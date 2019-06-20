@@ -5,17 +5,17 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { Global, css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 import { ITheme } from '../type';
 import { StateContext } from '../state';
-import Footer from './footer'
-import './layout.css'
+import Footer from './footer';
+import './layout.css';
 
 interface ILayoutProps {
-  children: JSX.Element[] | React.ReactElement
+  children: JSX.Element[] | React.ReactElement;
 }
 
 export default function Layout({ children }: ILayoutProps) {
@@ -30,7 +30,7 @@ export default function Layout({ children }: ILayoutProps) {
         <Footer />
       </Container>
     </>
-  )
+  );
 }
 
 const Container = styled.div`
@@ -45,7 +45,8 @@ const Content = styled.main`
 
 const style = (theme: ITheme) => ({
   global: css`
-    html, body {
+    html,
+    body {
       background: ${theme.background};
       display: flex;
       flex-direction: column;
@@ -60,4 +61,4 @@ const style = (theme: ITheme) => ({
       color: ${theme.text};
     }
   `,
-})
+});

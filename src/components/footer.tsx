@@ -1,19 +1,17 @@
-import React, { memo } from 'react'
-import styled from '@emotion/styled'
+import React, { memo } from 'react';
+import styled from '@emotion/styled';
 
-import ThemeIcon from './theme-icon'
+import ThemeIcon from './theme-icon';
 
-function Footer () {
+function Footer() {
   return (
     <Content>
       <Expando>
         <ThemeIcon />
       </Expando>
-      © {new Date().getFullYear()}
-      {' '}
-      Shantanu Raj
+      © {new Date().getFullYear()} Shantanu Raj
     </Content>
-  )
+  );
 }
 
 export default memo(Footer);
@@ -28,4 +26,4 @@ const Expando = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-`
+`;

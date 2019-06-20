@@ -1,4 +1,4 @@
-import React, { memo, useContext, useCallback } from 'react'
+import React, { memo, useContext, useCallback } from 'react';
 import { Icon } from '../icons';
 
 import styled from '@emotion/styled';
@@ -11,9 +11,9 @@ const iconMap = {
   light: 'sun' as const,
 };
 
-function ThemeIcon () {
+function ThemeIcon() {
   const { theme, changeTheme } = useContext(StateContext);
-  const onClick = useCallback(() => changeTheme(cycleTheme), [ theme.theme ]);
+  const onClick = useCallback(() => changeTheme(cycleTheme), [theme.theme]);
   return (
     <Button name="Change theme" onClick={onClick}>
       <Icon type={iconMap[theme.theme]} color={theme.accent} />
@@ -36,6 +36,6 @@ const cycleTheme = ({ theme }: ITheme): ITheme => {
   const nextIndex = (themeIndex + 1) % themes.length;
   const nextTheme = themes[nextIndex];
   return appTheme(nextTheme);
-}
+};
 
 export default memo(ThemeIcon);

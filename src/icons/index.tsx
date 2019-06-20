@@ -8,26 +8,28 @@ import { Night } from './night';
 const Icons = {
   sun: Sun,
   night: Night,
-}
+};
 
 interface IIconProps {
-  type: keyof typeof Icons
-  color?: string
-  size?: string | number
+  type: keyof typeof Icons;
+  color?: string;
+  size?: string | number;
 }
 
 export const Icon = ({ type, color, size }: IIconProps) => {
   const Comp = Icons[type];
   return (
-    <div style={{
-      fill: color,
-      height: size,
-      width: size,
-      minHeight: size,
-      minWidth: size,
-      display: 'flex',
-    }}>
+    <div
+      style={{
+        fill: color,
+        height: size,
+        width: size,
+        minHeight: size,
+        minWidth: size,
+        display: 'flex',
+      }}
+    >
       <Comp />
     </div>
-  )
-}
+  );
+};
