@@ -3,7 +3,8 @@ import { Storage } from './storage';
 import { isBrowser } from './is-browser';
 
 export const preferredTheme = (): ITheme['theme'] => {
-  const isLightModeSystem = isBrowser() && matchMedia('(prefers-color-scheme: light)').matches;
+  const isLightModeSystem =
+    isBrowser() && matchMedia('(prefers-color-scheme: light)').matches;
   const hasPreviousPreference = Storage.getTheme();
 
   if (hasPreviousPreference) {
@@ -14,4 +15,4 @@ export const preferredTheme = (): ITheme['theme'] => {
   }
 
   return 'dark';
-}
+};

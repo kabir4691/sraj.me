@@ -1,5 +1,9 @@
 import { Sun } from './sun';
 import { Night } from './night';
+import { Mail } from './mail';
+import { Medium } from './medium';
+import { Github } from './github';
+import { Twitter } from './twitter';
 
 /**
  * Icon wrapper
@@ -8,15 +12,19 @@ import { Night } from './night';
 const Icons = {
   sun: Sun,
   night: Night,
+  mail: Mail,
+  medium: Medium,
+  github: Github,
+  twitter: Twitter,
 };
 
-interface IIconProps {
+export interface IIconProps {
   type: keyof typeof Icons;
   color?: string;
   size?: string | number;
 }
 
-export const Icon = ({ type, color, size }: IIconProps) => {
+export const Icon = ({ type, color, size = 24 }: IIconProps) => {
   const Comp = Icons[type];
   return (
     <div

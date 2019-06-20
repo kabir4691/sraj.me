@@ -28,7 +28,8 @@ const storage = isBrowser()
 // Handle deprecated keys
 DEPRECATED_KEYS.forEach(storage.removeItem.bind(storage));
 
-const getStore = (): IStoreable => JSON.parse(storage.getItem(STORE_KEY) as string) || {};
+const getStore = (): IStoreable =>
+  JSON.parse(storage.getItem(STORE_KEY) as string) || {};
 
 const getValue = <K extends keyof IStoreable>(key: K): IStoreable[K] | null => {
   const store = getStore();

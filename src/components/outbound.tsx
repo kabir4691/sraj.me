@@ -1,10 +1,18 @@
 import React, { memo } from 'react';
 
+type OutboundProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
+
 /**
  * Oubound link wrapper
  */
-const Outbound = ({ href, children }: { href: string, children: React.ReactElement | string }) => (
-  <a href={href} target="_blank" rel="noopener">{children}</a>
+const Outbound = ({
+  href,
+  children,
+  ...props
+}: OutboundProps) => (
+  <a href={href} target="_blank" rel="noopener" {...props}>
+    {children}
+  </a>
 );
 
 export default memo(Outbound);
