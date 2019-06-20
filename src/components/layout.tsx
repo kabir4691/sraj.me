@@ -8,10 +8,9 @@
 import React, { useContext } from 'react'
 import { Global, css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { useStaticQuery, graphql } from 'gatsby'
-import { ITheme } from '../type';
-import { ThemeContext } from '../theme';
 
+import { ITheme } from '../type';
+import { StateContext } from '../state';
 import Footer from './footer'
 import './layout.css'
 
@@ -20,17 +19,8 @@ interface ILayoutProps {
 }
 
 export default function Layout({ children }: ILayoutProps) {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-  const theme = useContext(ThemeContext)
-  const styles = style(theme)
+  const { theme } = useContext(StateContext);
+  const styles = style(theme);
 
   return (
     <>
@@ -50,7 +40,7 @@ const Container = styled.div`
 
 const Content = styled.main`
   max-width: 960px;
-  padding: 20px;
+  padding: 24px;
 `;
 
 const style = (theme: ITheme) => ({
@@ -60,7 +50,10 @@ const style = (theme: ITheme) => ({
       display: flex;
       flex-direction: column;
       color: ${theme.text};
-      border: 16px solid ${theme.accent};
+    }
+
+    body {
+      border: 24px solid ${theme.accent};
     }
 
     a {

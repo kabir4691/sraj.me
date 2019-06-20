@@ -1,9 +1,15 @@
-import React from 'react';
-import { appTheme } from './app-theme';
+import { darkTheme } from './dark-theme';
+import { lightTheme } from './light-theme';
+import { ITheme } from '../type';
+
+const themes = {
+  'dark': darkTheme,
+  'light': lightTheme,
+}
 
 /**
- * Theme context
+ * Theme provider
  */
-export const ThemeContext = React.createContext(appTheme())
-
-export { appTheme } from './app-theme';
+export const appTheme = (mode: ITheme['theme'] = 'dark') => {
+  return themes[mode];
+}

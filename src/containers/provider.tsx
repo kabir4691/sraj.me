@@ -1,34 +1,27 @@
-import React from 'react'
-import { ITheme } from '../type';
-import { appTheme, ThemeContext } from '../theme';
+import React, { useState } from 'react';
+
+import { IAppState, StateContext } from '../state';
+import { appTheme } from '../theme';
 
 interface IProviderProps {
   children: React.ReactElement
 }
 
-interface IProviderState {
-  theme: ITheme
-}
-
 /**
  * Root Provider container
  */
-export default class Provider extends React.Component<IProviderProps, IProviderState> {
-  state = getProps();
+export default function Provider ({ children }: IProviderProps) {
+  const [ theme, changeTheme ] = useState(getTheme());
+  const state = { theme, changeTheme };
 
-  render() {
-    const { theme } = this.state;
-    return (
-      <ThemeContext.Provider value={theme} >
-        {this.props.children}
-      </ThemeContext.Provider>
-    );
-  }
+  return (
+    <StateContext.Provider value={state} >
+      {children}
+    </StateContext.Provider>
+  );
 }
 
-function getProps (): IProviderState {
+function getTheme (): IAppState['theme'] {
   const theme = appTheme('light');
-  return {
-    theme,
-  }
+  return theme;
 }
