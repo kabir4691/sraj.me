@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { memo } from 'react'
+import styled from '@emotion/styled';
 
-export default function Footer () {
+function Footer () {
   return (
-    <footer>
-      © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
-    </footer>
+    <Content>
+      © {new Date().getFullYear()}
+      {' '}
+      Shantanu Raj
+    </Content>
   )
 }
+
+export default memo(Footer)
+
+const Content = styled.footer`
+  padding: 20px;
+`;

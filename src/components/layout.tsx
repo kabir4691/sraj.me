@@ -6,11 +6,12 @@
  */
 
 import React, { useContext } from 'react'
+import { Global, css } from '@emotion/core';
+import styled from '@emotion/styled';
 import { useStaticQuery, graphql } from 'gatsby'
 import { ITheme } from '../type';
 import { ThemeContext } from '../theme';
 
-import Header from './header'
 import Footer from './footer'
 import './layout.css'
 
@@ -33,22 +34,37 @@ export default function Layout({ children }: ILayoutProps) {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div style={styles.container}>
-        <main>{children}</main>
+      <Global styles={styles.global} />
+      <Container>
+        <Content>{children}</Content>
         <Footer />
-      </div>
+      </Container>
     </>
   )
 }
 
+const Container = styled.div`
+  height: 100%;
+  width: 100%;
+`;
+
+const Content = styled.main`
+  max-width: 960px;
+  padding: 20px;
+`;
+
 const style = (theme: ITheme) => ({
-  background: {
-    backgroundColor: theme.background,
-  },
-  container: {
-    maxWidth: 960,
-    padding: `0px 1.0875rem 1.45rem`,
-    paddingTop: 0,
-  }
+  global: css`
+    html, body {
+      background: ${theme.background};
+      display: flex;
+      flex-direction: column;
+      color: ${theme.text};
+      border: 16px solid ${theme.accent};
+    }
+
+    a {
+      color: ${theme.text};
+    }
+  `,
 })

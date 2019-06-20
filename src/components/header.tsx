@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import React from 'react'
+import React, { memo } from 'react'
 
 const Header = ({ siteTitle }: { siteTitle: string }) => (
   <header
@@ -34,4 +34,4 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default memo(Header)

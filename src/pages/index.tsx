@@ -11,8 +11,8 @@ const IndexPage = () => (
   <Provider>
     <Layout>
       <SEO title="Home" />
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
+      <h1>Hi I'm Shantanu</h1>
+      <p>I architect and build apps.</p>
       <p>Now go build something great.</p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
