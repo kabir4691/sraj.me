@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 import { StateContext } from '../state';
 import { ITheme } from '../type';
 import { appTheme } from '../theme';
+import { useKeyPress } from '../hooks/use-key-press';
 
 const iconMap = {
   dark: 'night' as const,
@@ -13,9 +14,11 @@ const iconMap = {
 
 function ThemeIcon() {
   const { theme, changeTheme } = useContext(StateContext);
-  const onClick = useCallback(() => changeTheme(cycleTheme), [theme.theme]);
+  const cycleAppTheme = useCallback(() => changeTheme(cycleTheme), [theme.theme]);
+  useKeyPress('t', cycleAppTheme);
+
   return (
-    <Button name="Change theme" onClick={onClick}>
+    <Button name="Change theme" onClick={cycleAppTheme}>
       <Icon type={iconMap[theme.theme]} color={theme.accent} />
     </Button>
   );
