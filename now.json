@@ -1,7 +1,4 @@
 {
   "version": 2,
-  "name": "sraj-me-static",
-  "builds": [
-      { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
-  ]
+  "name": "sraj-me"
 }
