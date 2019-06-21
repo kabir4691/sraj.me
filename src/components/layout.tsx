@@ -54,6 +54,7 @@ const style = (theme: ITheme) => ({
 
     body {
       border: 24px solid ${theme.accent};
+      overflow: scroll;
     }
 
     a {
