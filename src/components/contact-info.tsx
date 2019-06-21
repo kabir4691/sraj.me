@@ -44,7 +44,7 @@ const info: IContactInfo[] = [
 ];
 
 const renderContact = (theme: ITheme) => (item: IContactInfo) => (
-  <li>
+  <li key={item.type}>
     <Outbound href={item.href} style={linkStyle}>
       <Icon type={item.type} color={theme.accent} />
       <Text>{item.type}</Text>

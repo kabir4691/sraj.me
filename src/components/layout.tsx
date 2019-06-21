@@ -39,7 +39,6 @@ const Container = styled.div`
 `;
 
 const Content = styled.main`
-  max-width: 960px;
   padding: 24px;
 `;
 
