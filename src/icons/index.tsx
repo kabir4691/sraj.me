@@ -4,6 +4,7 @@ import { Mail } from './mail';
 import { Medium } from './medium';
 import { Github } from './github';
 import { Twitter } from './twitter';
+import { Bluetooth } from './bluetooth';
 
 /**
  * Icon wrapper
@@ -16,6 +17,7 @@ const Icons = {
   medium: Medium,
   github: Github,
   twitter: Twitter,
+  bluetooth: Bluetooth,
 };
 
 export interface IIconProps {

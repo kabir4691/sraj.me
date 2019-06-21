@@ -10,6 +10,7 @@ import { Storage } from '../utils/storage';
 
 const iconMap = {
   dark: 'night' as const,
+  blue: 'bluetooth' as const,
   light: 'sun' as const,
 };
 
