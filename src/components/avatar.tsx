@@ -15,6 +15,6 @@ function Avatar({ theme: { theme } }: Pick<ThemeProvision, 'theme'>) {
 
 const MemoizedAvatar = memo(Avatar);
 
-const AvatarContainer = () => <Themed render={MemoizedAvatar} />;
+const AvatarContainer = () => <Themed render={MemoizedAvatar} props={['theme']} />;
 
 export default AvatarContainer;

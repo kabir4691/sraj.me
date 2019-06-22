@@ -55,6 +55,6 @@ const renderContact = (theme: ITheme) => (item: IContactInfo) => (
 
 const MemoizedContactInfo = memo(ContactInfo);
 
-const ContactInfoContainer = () => <Themed render={MemoizedContactInfo} />;
+const ContactInfoContainer = () => <Themed render={MemoizedContactInfo} props={['theme']} />;
 
 export default ContactInfoContainer;

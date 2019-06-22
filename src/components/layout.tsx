@@ -21,7 +21,7 @@ interface ILayoutProps {
 function Layout({ children }: ILayoutProps) {
   return (
     <>
-      <Themed render={GlobalStyles}/>
+      <Themed render={GlobalStyles} props={['theme']} />
       <Container>
         <Content>{children}</Content>
         <Footer />
