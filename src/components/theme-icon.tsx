@@ -24,7 +24,7 @@ function ThemeIcon({ theme, changeTheme }: ThemeProvision) {
   useKeyPress('t', cycleAppTheme);
 
   return (
-    <Button name="Change theme" onClick={cycleAppTheme}>
+    <Button aria-label="Change theme" onClick={cycleAppTheme}>
       <Icon type={iconMap[theme.theme]} color={theme.accent} />
     </Button>
   );
