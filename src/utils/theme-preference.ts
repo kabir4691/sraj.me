@@ -2,6 +2,8 @@ import { ITheme } from '../type';
 import { Storage } from './storage';
 import { isBrowser } from './is-browser';
 
+const defaultTheme: ITheme['theme'] = 'blue';
+
 export const preferredTheme = (): ITheme['theme'] => {
   const isLightModeSystem =
     isBrowser() && matchMedia('(prefers-color-scheme: light)').matches;
@@ -14,5 +16,5 @@ export const preferredTheme = (): ITheme['theme'] => {
     return 'light';
   }
 
-  return 'dark';
+  return defaultTheme;
 };
