@@ -1,10 +1,10 @@
-import React, { useContext, useMemo, memo } from 'react'
-import { StateContext } from '../state';
+import React, { memo } from 'react'
+
+import Themed, { ThemeProvision } from '../containers/themed';
 import AvatarDark from './avatar-dark';
 import AvatarLight from './avatar-light';
 
-const Avatar = () => {
-  const { theme: { theme } } = useContext(StateContext);
+function Avatar({ theme: { theme } }: Pick<ThemeProvision, 'theme'>) {
   if (theme === 'dark') {
     return (
       <AvatarDark />
@@ -13,4 +13,8 @@ const Avatar = () => {
   return <AvatarLight />;
 };
 
-export default memo(Avatar);
+const MemoizedAvatar = memo(Avatar);
+
+const AvatarContainer = () => <Themed render={MemoizedAvatar} />;
+
+export default AvatarContainer;

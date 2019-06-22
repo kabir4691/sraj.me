@@ -1,18 +1,19 @@
-import React, { memo, useContext } from 'react';
+import React, { memo } from 'react';
 import styled from '@emotion/styled';
 
 import { Icon, IIconProps } from '../icons';
 import Outbound from './outbound';
 import { ITheme } from '../type';
-import { StateContext } from '../state';
+import Themed, { ThemeProvision } from '../containers/themed';
 
 interface IContactInfo {
   type: IIconProps['type']
   href: string
 }
 
-function ContactInfo () {
-  const { theme } = useContext(StateContext);
+type ContactInfoProps = Pick<ThemeProvision, 'theme'>;
+
+const ContactInfo = function ContactInfo ({ theme }: ContactInfoProps) {
   return (
     <Container>
       {info.map(renderContact(theme))}
@@ -52,4 +53,8 @@ const renderContact = (theme: ITheme) => (item: IContactInfo) => (
   </li>
 );
 
-export default memo(ContactInfo);
+const MemoizedContactInfo = memo(ContactInfo);
+
+const ContactInfoContainer = () => <Themed render={MemoizedContactInfo} />;
+
+export default ContactInfoContainer;

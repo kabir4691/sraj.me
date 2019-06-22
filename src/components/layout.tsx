@@ -5,12 +5,12 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useContext } from 'react';
+import React, { memo } from 'react';
 import { Global, css } from '@emotion/core';
 import styled from '@emotion/styled';
 
+import Themed, { ThemeProvision } from '../containers/themed';
 import { ITheme } from '../type';
-import { StateContext } from '../state';
 import Footer from './footer';
 import './layout.css';
 
@@ -18,13 +18,10 @@ interface ILayoutProps {
   children: JSX.Element[] | React.ReactElement;
 }
 
-export default function Layout({ children }: ILayoutProps) {
-  const { theme } = useContext(StateContext);
-  const styles = style(theme);
-
+function Layout({ children }: ILayoutProps) {
   return (
     <>
-      <Global styles={styles.global} />
+      <Themed render={GlobalStyles}/>
       <Container>
         <Content>{children}</Content>
         <Footer />
@@ -32,6 +29,10 @@ export default function Layout({ children }: ILayoutProps) {
     </>
   );
 }
+
+const GlobalStyles = ({ theme }: Pick<ThemeProvision, 'theme'>) => (
+  <Global styles={style(theme).global} />
+);
 
 const Container = styled.div`
   height: 100%;
@@ -62,3 +63,5 @@ const style = (theme: ITheme) => ({
     }
   `,
 });
+
+export default memo(Layout);
