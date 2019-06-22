@@ -25,7 +25,7 @@ function ThemeIcon({ theme, changeTheme }: ThemeProvision) {
 
   return (
     <Button aria-label="Change theme" onClick={cycleAppTheme}>
-      <Icon type={iconMap[theme.theme]} color={theme.accent} />
+      <Icon type={iconMap[theme.theme]} />
     </Button>
   );
 }

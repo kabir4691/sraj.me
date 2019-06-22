@@ -6,13 +6,12 @@
  */
 
 import React, { memo } from 'react';
-import { Global, css } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import Themed, { ThemeProvision } from '../containers/themed';
-import { ITheme } from '../type';
+import ThemeContent from './theme-content';
 import Footer from './footer';
 import './layout.css';
+
 
 interface ILayoutProps {
   children: JSX.Element[] | React.ReactElement;
@@ -21,7 +20,7 @@ interface ILayoutProps {
 function Layout({ children }: ILayoutProps) {
   return (
     <>
-      <Themed render={GlobalStyles} props={['theme']} />
+      <ThemeContent />
       <Container>
         <Content>{children}</Content>
         <Footer />
@@ -29,10 +28,6 @@ function Layout({ children }: ILayoutProps) {
     </>
   );
 }
-
-const GlobalStyles = ({ theme }: Pick<ThemeProvision, 'theme'>) => (
-  <Global styles={style(theme).global} />
-);
 
 const Container = styled.div`
   height: 100%;
@@ -42,30 +37,5 @@ const Container = styled.div`
 const Content = styled.main`
   padding: 24px;
 `;
-
-const style = (theme: ITheme) => ({
-  global: css`
-    html,
-    body {
-      background: ${theme.background};
-      display: flex;
-      flex-direction: column;
-      color: ${theme.text};
-    }
-
-    body {
-      border: 24px solid ${theme.accent};
-      overflow: scroll;
-    }
-
-    a {
-      color: ${theme.text};
-    }
-
-    .sh-icon svg {
-      fill: ${theme.accent};
-    }
-  `,
-});
 
 export default memo(Layout);
