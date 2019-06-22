@@ -13,9 +13,12 @@ interface IContactInfo {
 
 function ContactInfo () {
   return (
-    <Container>
-      {info.map(ContactInfoItem)}
-    </Container>
+    <>
+      <h3>contact</h3>
+      <Container>
+        {info.map(ContactInfoItem)}
+      </Container>
+    </>
   );
 };
 

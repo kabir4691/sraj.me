@@ -1,9 +1,11 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
 import Layout from '../components/layout';
 import Avatar from '../components/avatar';
 import SEO from '../components/seo';
 import Outbound from '../components/outbound';
+import Notes from '../components/notes';
 import ContactInfo from '../components/contact-info';
 import { Split, Pane } from '../components/ui';
 
@@ -24,11 +26,22 @@ const IndexPage = () => (
           <Avatar />
         </div>
       </Pane>
-      <Pane style={{ alignItems: 'flex-end' }}>
-        <ContactInfo />
-      </Pane>
+      <SidePane>
+        <Pane>
+          <Notes />
+        </Pane>
+        <Pane>
+          <ContactInfo />
+        </Pane>
+      </SidePane>
     </Split>
   </Layout>
 );
+
+const SidePane = styled(Pane)`
+  @media (min-width: 960px) {
+    align-items: flex-end;
+  }
+`
 
 export default IndexPage;
