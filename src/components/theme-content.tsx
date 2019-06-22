@@ -8,7 +8,7 @@ import { Global, css } from '@emotion/core';
 
 import Themed, { ThemeProvision } from '../containers/themed';
 
-function ThemeContent ({ theme }: Pick<ThemeProvision, 'theme'>) {
+function ThemeContent({ theme }: Pick<ThemeProvision, 'theme'>) {
   const style = css`
     html,
     body {
@@ -49,6 +49,8 @@ function ThemeContent ({ theme }: Pick<ThemeProvision, 'theme'>) {
 
 const MemoizedThemeContent = memo(ThemeContent);
 
-const ThemeContentContainer = () => <Themed render={MemoizedThemeContent} props={['theme']} />;
+const ThemeContentContainer = () => (
+  <Themed render={MemoizedThemeContent} props={['theme']} />
+);
 
 export default ThemeContentContainer;

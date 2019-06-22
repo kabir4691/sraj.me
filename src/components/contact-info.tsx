@@ -6,22 +6,20 @@ import Outbound from './outbound';
 import { ITheme } from '../type';
 
 interface IContactInfo {
-  type: IIconProps['type']
-  href: string
+  type: IIconProps['type'];
+  href: string;
 }
 
-function ContactInfo () {
+function ContactInfo() {
   return (
     <>
       <h3>contact</h3>
-      <Container>
-        {info.map(ContactInfoItem)}
-      </Container>
+      <Container>{info.map(ContactInfoItem)}</Container>
     </>
   );
-};
+}
 
-function ContactInfoItem (item: IContactInfo) {
+function ContactInfoItem(item: IContactInfo) {
   return (
     <li key={item.type}>
       <Outbound href={item.href} style={linkStyle}>

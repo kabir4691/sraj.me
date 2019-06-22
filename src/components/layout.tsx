@@ -12,7 +12,6 @@ import ThemeContent from './theme-content';
 import Footer from './footer';
 import './layout.css';
 
-
 interface ILayoutProps {
   children: JSX.Element[] | React.ReactElement;
 }

@@ -17,8 +17,9 @@ const IndexPage = () => (
         <h1>Hi, I'm Shantanu.</h1>
         <p>I architect and build apps.</p>
         <p>
-          Currently I work at <Outbound href="https://toggl.com">Toggl</Outbound>{' '}
-          building their web-applications.
+          Currently I work at{' '}
+          <Outbound href="https://toggl.com">Toggl</Outbound> building their
+          web-applications.
         </p>
         <p>I enjoy working with TypeScript and Go the most.</p>
         <p>Sometimes I dabble with Android too.</p>
@@ -42,6 +43,6 @@ const SidePane = styled(Pane)`
   @media (min-width: 960px) {
     align-items: flex-end;
   }
-`
+`;
 
 export default IndexPage;

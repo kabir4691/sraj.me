@@ -10,7 +10,7 @@ export const preferredTheme = (): ITheme['theme'] => {
   }
 
   const isLightModeSystem = matchMedia('(prefers-color-scheme: light)').matches;
-  const isDarkModeSystem  = matchMedia('(prefers-color-scheme: dark)').matches;
+  const isDarkModeSystem = matchMedia('(prefers-color-scheme: dark)').matches;
   const hasPreviousPreference = Storage.getTheme();
 
   if (hasPreviousPreference) {

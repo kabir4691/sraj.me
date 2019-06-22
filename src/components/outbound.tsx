@@ -5,11 +5,7 @@ type OutboundProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
 /**
  * Oubound link wrapper
  */
-const Outbound = ({
-  href,
-  children,
-  ...props
-}: OutboundProps) => (
+const Outbound = ({ href, children, ...props }: OutboundProps) => (
   <a href={href} target="_blank" rel="noopener" {...props}>
     {children}
   </a>
