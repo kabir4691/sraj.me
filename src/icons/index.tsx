@@ -30,6 +30,7 @@ export const Icon = ({ type, color, size = 24 }: IIconProps) => {
   const Comp = Icons[type];
   return (
     <div
+      className="sh-icon"
       style={{
         fill: color,
         height: size,

@@ -61,6 +61,10 @@ const style = (theme: ITheme) => ({
     a {
       color: ${theme.text};
     }
+
+    .sh-icon svg {
+      fill: ${theme.accent};
+    }
   `,
 });
 

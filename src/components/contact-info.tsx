@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 import { Icon, IIconProps } from '../icons';
 import Outbound from './outbound';
 import { ITheme } from '../type';
-import Themed from '../containers/themed';
 
 interface IContactInfo {
   type: IIconProps['type']
@@ -26,19 +25,10 @@ function ContactInfoItem (item: IContactInfo) {
   return (
     <li key={item.type}>
       <Outbound href={item.href} style={linkStyle}>
-        <SocialIcon type={item.type} />
+        <Icon type={item.type} />
         <Text>{item.type}</Text>
       </Outbound>
     </li>
-  );
-}
-
-function SocialIcon ({ type }: Pick<IContactInfo, 'type'>) {
-  return (
-    <Themed
-      props={['theme']}
-      render={memo(({ theme }) => <Icon type={type} color={theme.accent} />)}
-    />
   );
 }
 
