@@ -3,6 +3,7 @@ module.exports = {
     title: `Shantanu Raj`,
     description: `Hi, I'm Shantanu. I'm a software engineer at Toggl`,
     author: `@shantanuraj`,
+    siteUrl: `https://sraj.me`
   },
   plugins: [
     `gatsby-plugin-typescript`,
@@ -16,6 +17,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-43262567-3`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
