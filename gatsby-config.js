@@ -1,9 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Shantanu Raj`,
+    author: `Shantanu Raj`,
     description: `Hi, I'm Shantanu. I'm a software engineer at Toggl`,
-    author: `@shantanuraj`,
-    siteUrl: `https://sraj.me`
+    siteUrl: `https://sraj.me`,
+    social: {
+      twitter: `@shantanuraj`,
+    },
   },
   plugins: [
     `gatsby-plugin-typescript`,

@@ -8,6 +8,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: color 0.2s ease-out, background 0.2s ease-out;
 }
 html, body {
   height: 100%;
