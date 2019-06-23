@@ -34,13 +34,17 @@ function BlogPost ({ data: { markdownRemark } }: IBlogPostProps) {
           <h1>{title}</h1>
           <DurationInfo date={date} timeToRead={timeToRead} />
         </Header>
-        <div dangerouslySetInnerHTML={{ __html }}></div>
+        <NoteContent dangerouslySetInnerHTML={{ __html }} />
       </div>
     </Layout>
   );
 }
 
 const Header = styled.header`
+  margin-bottom: 72px;
+`;
+
+const NoteContent = styled.div`
   margin-bottom: 72px;
 `;
 
