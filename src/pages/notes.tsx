@@ -3,9 +3,9 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 
 import { NoteData } from '../type';
-import { formatDate } from '../utils/format-date';
 import NotesContainer from '../containers/notes-container';
 import Layout from '../components/layout';
+import DurationInfo from '../components/duration-info';
 
 interface INotesProps {
   notes: NoteData[];
@@ -31,9 +31,7 @@ function Note({ title, path, date }: NoteData) {
       <h2>
         <Link to={path}>{title}</Link>
       </h2>
-      <small>
-        {formatDate(date)}
-      </small>
+      <DurationInfo date={date} />
     </li>
   );
 }

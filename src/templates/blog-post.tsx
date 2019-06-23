@@ -10,6 +10,7 @@ import { graphql } from 'gatsby';
 
 import { MarkdownQuery, NoteData } from '../type';
 import Layout from '../components/layout';
+import DurationInfo from '../components/duration-info';
 
 interface IBlogPostProps {
   data: {
@@ -18,20 +19,25 @@ interface IBlogPostProps {
 }
 
 function BlogPost ({ data: { markdownRemark } }: IBlogPostProps) {
-  const { frontmatter: { title }, html: __html } = markdownRemark;
+  const { frontmatter: { title, date }, html: __html } = markdownRemark;
   return (
     <Layout>
       <Helmet
         title={title}
       />
-      <Container>
+      <div>
+        <Header>
+          <h1>{title}</h1>
+          <DurationInfo date={date} />
+        </Header>
         <div dangerouslySetInnerHTML={{ __html }}></div>
-      </Container>
+      </div>
     </Layout>
   );
 }
 
-const Container = styled.div`
+const Header = styled.header`
+  margin-bottom: 72px;
 `;
 
 export default BlogPost;
