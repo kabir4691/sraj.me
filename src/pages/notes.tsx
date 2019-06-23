@@ -16,16 +16,22 @@ function Notes({ notes }: INotesProps) {
       <Helmet title="Notes" />
       <>
         <h1>Notes</h1>
-        {notes.map(Note)}
+        <ul>
+          {notes.map(Note)}
+        </ul>
       </>
     </Layout>
   )
 };
 
-export function Note({ title, path }: NoteData) {
+function Note({ title, path }: NoteData) {
   return (
     <li key={path}>
-      <Link to={path}>{title}</Link>
+      <h2>
+        <Link to={path}>
+          {title}
+        </Link>
+      </h2>
     </li>
   );
 }

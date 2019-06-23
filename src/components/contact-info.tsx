@@ -53,13 +53,4 @@ const info: IContactInfo[] = [
   { type: 'mail', href: 'mailto:s@sraj.me' },
 ];
 
-const renderContact = (theme: ITheme) => (item: IContactInfo) => (
-  <li key={item.type}>
-    <Outbound href={item.href} style={linkStyle}>
-      <Icon type={item.type} color={theme.accent} />
-      <Text>{item.type}</Text>
-    </Outbound>
-  </li>
-);
-
 export default ContactInfo;

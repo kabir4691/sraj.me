@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 import { Link } from 'gatsby';
-import { Note } from '../pages/notes';
 import { NoteData } from '../type';
 import NotesContainer from '../containers/notes-container';
 
@@ -16,6 +15,14 @@ function NotesFeed({ notes }: INotesFeedProps) {
       </h3>
       <ul>{notes.map(Note)}</ul>
     </>
+  );
+}
+
+function Note({ title, path }: NoteData) {
+  return (
+    <li key={path}>
+      <Link to={path}>{title}</Link>
+    </li>
   );
 }
 
