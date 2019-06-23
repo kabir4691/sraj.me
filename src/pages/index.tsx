@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 import Avatar from '../components/avatar';
 import SEO from '../components/seo';
 import Outbound from '../components/outbound';
-import Notes from '../components/notes';
+import NotesFeed from '../components/notes-feed';
 import ContactInfo from '../components/contact-info';
 import { Split, Pane } from '../components/ui';
 
@@ -29,7 +29,7 @@ const IndexPage = () => (
       </Pane>
       <SidePane>
         <Pane>
-          <Notes />
+          <NotesFeed />
         </Pane>
         <Pane>
           <ContactInfo />

@@ -8,22 +8,16 @@ import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 
-import { MarkdownQuery } from '../type';
+import { MarkdownQuery, NoteData } from '../type';
 import Layout from '../components/layout';
 
-interface NoteData {
-  date: string;
-  path: string;
-  title: string;
-}
-
-interface BlogPostProps {
+interface IBlogPostProps {
   data: {
     markdownRemark: MarkdownQuery<NoteData>
   }
 }
 
-function BlogPost ({ data: { markdownRemark } }: BlogPostProps) {
+function BlogPost ({ data: { markdownRemark } }: IBlogPostProps) {
   const { frontmatter: { title }, html: __html } = markdownRemark;
   return (
     <Layout>
