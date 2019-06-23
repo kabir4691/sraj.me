@@ -21,6 +21,7 @@ function NotesContainer({ render: Component }: INotesContainerProps) {
             frontmatter {
               path
               title
+              date
             }
           }
         }
