@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "name": "sraj-me"
+  "name": "sraj-me",
+  "alias": [
+    "sraj.me"
+  ]
 }
