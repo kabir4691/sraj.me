@@ -36,7 +36,7 @@ The tools that power my daily life as a software engineer.
 ## shell
 
 * [zsh](https://ohmyz.sh/) - oh my zsh is life.
-* [neovim](https://neovim.io/) - For when I something faster than a web-browser.
+* [neovim](https://neovim.io/) - For when I need something faster than a web-browser.
 * [fzf](https://github.com/junegunn/fzf) - Fuzzy anything is a win my books.
 * [ripgrep](https://github.com/BurntSushi/ripgrep) - A better grep.
 * [jq](https://stedolan.github.io/jq/) - JSON processor for your cli.
