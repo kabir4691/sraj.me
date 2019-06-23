@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
 import ThemeIcon from './theme-icon';
@@ -8,6 +9,7 @@ function Footer() {
     <Content>
       <Expando>
         <ThemeIcon />
+        <Link to="/">home</Link>
       </Expando>
       © {new Date().getFullYear()} Shantanu Raj
     </Content>
@@ -26,4 +28,7 @@ const Expando = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  & div {
+    margin-right: 24px;
+  }
 `;
