@@ -16,7 +16,7 @@ The tools that power my daily life as a software engineer.
 * [9.7" iPad Pro with the Apple Pencil](https://www.apple.com/shop/refurbished/ipad/ipad-pro-9-7) - It's a bit old but runs the latest iOS and the battery still works. I primarily use it for note-taking.
 * [Bose QC35](https://www.bose.com/en_us/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html#v=qc35_ii_black) - Best travel headphones by far. Dare I say it is quite comfortable.
 * [RHA Trueconnect](https://www.rha-audio.com/in/products/headphones/true-connect) - For when headphones are not practical.
-* [Victornox Zip-Around wallet](https://www.amazon.com/Victorinox-Zip-Around-Wallet-Black-Logo/dp/B00UCAMO4S/) - Really useful if you travel around (quite a few countries in Europe are not card-friendly).
+* [Victorinox Zip-Around wallet](https://www.amazon.com/Victorinox-Zip-Around-Wallet-Black-Logo/dp/B00UCAMO4S/) - Really useful if you travel around (quite a few countries in Europe are not card-friendly).
 * [Logitech MX Master](https://www.amazon.com/Logitech-Wireless-Cross-Computer-Control-Windows/dp/B071Z8RZHG) - I really dig the multi-device support and quick-switching.
 * [Anker PowerCore Speed 20000 PD](https://www.amazon.com/gp/product/B071WNWRNC/) - Amazingly portable charger from Anker supports Power Delivery, can even charge my laptop when I'm not actively using it.
 
