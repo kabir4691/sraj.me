@@ -15,7 +15,7 @@ const AvatarLight = () => {
     }
   `);
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
+  return <Img alt="Shantanu Raj" fluid={data.placeholderImage.childImageSharp.fluid} />;
 };
 
 export default AvatarLight;
