@@ -4,7 +4,7 @@ date: 2019-06-23T11:51:33.962Z
 title: "uses"
 ---
 
-The tools that powered my daily life as a software engineer.
+The tools that power my daily life as a software engineer.
 
 ## hardware
 
