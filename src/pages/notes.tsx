@@ -2,13 +2,13 @@ import React, { memo } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 
-import { NoteData } from '../type';
+import { NoteData, NoteQuery } from '../type';
 import NotesContainer from '../containers/notes-container';
 import Layout from '../components/layout';
 import DurationInfo from '../components/duration-info';
 
 interface INotesProps {
-  notes: NoteData[];
+  notes: NoteQuery[];
 }
 
 function Notes({ notes }: INotesProps) {
@@ -25,13 +25,16 @@ function Notes({ notes }: INotesProps) {
   )
 };
 
-function Note({ title, path, date }: NoteData) {
+function Note({
+  timeToRead,
+  frontmatter: { title, path, date }
+}: NoteQuery) {
   return (
     <li key={path}>
       <h2>
         <Link to={path}>{title}</Link>
       </h2>
-      <DurationInfo date={date} />
+      <DurationInfo date={date} timeToRead={timeToRead} />
     </li>
   );
 }

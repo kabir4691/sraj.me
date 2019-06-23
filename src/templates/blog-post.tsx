@@ -8,27 +8,31 @@ import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 
-import { MarkdownQuery, NoteData } from '../type';
+import { NoteQuery } from '../type';
 import Layout from '../components/layout';
 import DurationInfo from '../components/duration-info';
 
 interface IBlogPostProps {
   data: {
-    markdownRemark: MarkdownQuery<NoteData>
+    markdownRemark: NoteQuery
   }
 }
 
 function BlogPost ({ data: { markdownRemark } }: IBlogPostProps) {
-  const { frontmatter: { title, date }, html: __html } = markdownRemark;
+  const {
+    frontmatter: { title, date },
+    html: __html,
+    timeToRead,
+  } = markdownRemark;
   return (
     <Layout>
       <Helmet
-        title={title}
+        title={`${title} — Shantanu Raj`}
       />
       <div>
         <Header>
           <h1>{title}</h1>
-          <DurationInfo date={date} />
+          <DurationInfo date={date} timeToRead={timeToRead} />
         </Header>
         <div dangerouslySetInnerHTML={{ __html }}></div>
       </div>
@@ -46,6 +50,7 @@ export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      timeToRead
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path

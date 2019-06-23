@@ -4,15 +4,19 @@
 
 import React, { memo } from 'react';
 import { formatDate } from '../utils/format-date';
+import { formatTimeToRead } from '../utils/format-time-to-read';
 
 interface IDurationInfoProps {
   date: string;
+  timeToRead: number;
 }
 
-function DurationInfo ({ date }: IDurationInfoProps) {
+function DurationInfo ({ date, timeToRead }: IDurationInfoProps) {
   return (
     <small>
       {formatDate(date)}
+      <strong>{' • '}</strong>
+      {formatTimeToRead(timeToRead)}
     </small>
   );
 }

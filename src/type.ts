@@ -11,9 +11,10 @@ export interface ITheme {
 /**
  * Markdown query result
  */
-export interface MarkdownQuery<T> {
-  frontmatter: T;
+export interface NoteQuery {
+  frontmatter: NoteData;
   html: string;
+  timeToRead: number;
 }
 
 /**
@@ -30,6 +31,6 @@ export interface NoteData {
  */
 export interface MarkdownQueryList {
   allMarkdownRemark: {
-    edges: Array<{ node: { frontmatter: NoteData } }>;
+    edges: Array<{ node: NoteQuery }>;
   }
 }
