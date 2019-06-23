@@ -31,10 +31,15 @@ function Layout({ children }: ILayoutProps) {
 const Container = styled.div`
   height: 100%;
   width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
 `;
 
 const Content = styled.main`
   padding: 24px;
+  max-width: 1440px;
+  min-height: 768px;
+  margin: 0 auto;
 `;
 
 export default memo(Layout);
