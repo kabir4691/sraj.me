@@ -23,6 +23,7 @@ function NotesContainer({ render: Component }: INotesContainerProps) {
               path
               title
               date
+              spoiler
             }
           }
         }

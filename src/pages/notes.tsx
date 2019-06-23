@@ -27,7 +27,7 @@ function Notes({ notes }: INotesProps) {
 
 function Note({
   timeToRead,
-  frontmatter: { title, path, date }
+  frontmatter: { title, path, date, spoiler }
 }: NoteQuery) {
   return (
     <li key={path}>
@@ -35,6 +35,7 @@ function Note({
         <Link to={path}>{title}</Link>
       </h2>
       <DurationInfo date={date} timeToRead={timeToRead} />
+      <p>{spoiler}</p>
     </li>
   );
 }

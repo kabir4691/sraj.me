@@ -24,6 +24,7 @@ export interface NoteData {
   date: string;
   path: string;
   title: string;
+  spoiler: string;
 }
 
 /**

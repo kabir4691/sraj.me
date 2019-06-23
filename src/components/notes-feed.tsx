@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Link } from 'gatsby';
-import { NoteData, NoteQuery } from '../type';
+import { NoteQuery } from '../type';
 import NotesContainer from '../containers/notes-container';
 
 interface INotesFeedProps {
@@ -18,10 +18,11 @@ function NotesFeed({ notes }: INotesFeedProps) {
   );
 }
 
-function Note({ frontmatter: { path, title } }: NoteQuery) {
+function Note({ frontmatter: { path, title, spoiler } }: NoteQuery) {
   return (
     <li key={path}>
       <Link to={path}>{title}</Link>
+      {` — ${spoiler}`}
     </li>
   );
 }
