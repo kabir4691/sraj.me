@@ -11,6 +11,7 @@ import { graphql } from 'gatsby';
 import { NoteQuery } from '../type';
 import Layout from '../components/layout';
 import DurationInfo from '../components/duration-info';
+import Bio from '../components/bio';
 
 interface IBlogPostProps {
   data: {
@@ -35,6 +36,7 @@ function BlogPost ({ data: { markdownRemark } }: IBlogPostProps) {
           <DurationInfo date={date} timeToRead={timeToRead} />
         </Header>
         <NoteContent dangerouslySetInnerHTML={{ __html }} />
+        <Bio />
       </div>
     </Layout>
   );
