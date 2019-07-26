@@ -72,8 +72,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Shantanu Raj`,
+        short_name: `Shantanu`,
         start_url: `/`,
         background_color: `#212121`,
         theme_color: `#212121`,
